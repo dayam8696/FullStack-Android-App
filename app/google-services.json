@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870380780913",
+    "project_id": "fullstackapp-eeef7",
+    "storage_bucket": "fullstackapp-eeef7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870380780913:android:27c338e598e3d0f23c0ad0",
+        "android_client_info": {
+          "package_name": "com.example.fullstackapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQHLPTw_qnmQaXLXaczi8vZenaG-nx-ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
