@@ -1,9 +1,10 @@
-package com.example.fullstackapp
+package com.example.fullstackapp.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.fullstackapp.databinding.BaseFragmentBinding
 
@@ -16,4 +17,9 @@ open class BaseFragment : Fragment() {
     ): View? {
         return binding.root
     }
+
+    fun showToast(string: String) {
+        Toast.makeText(requireContext(), string, Toast.LENGTH_SHORT).show()
+    }
+
 }

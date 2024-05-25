@@ -1,4 +1,4 @@
-package com.example.fullstackapp
+package com.example.fullstackapp.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import com.example.fullstackapp.models.Contacts
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class AddFragment :BaseFragment() {
+class AddFragment : BaseFragment() {
     private val binding by lazy { AddFragmentBinding.inflate(layoutInflater) }
     private lateinit var firebaseRef: DatabaseReference
 
