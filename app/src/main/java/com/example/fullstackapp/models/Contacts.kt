@@ -1,7 +1,7 @@
 package com.example.fullstackapp.models
 
 data class Contacts(
-    val id :String? = null,
-    val name :String? = null,
-    val phoneNumber : String? = null
+    var id :String? = null,
+    var name :String? = null,
+    var phoneNumber : String? = null
 )
