@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.example.fullstackapp.R
 import com.example.fullstackapp.databinding.AddFragmentBinding
 import com.example.fullstackapp.models.Contacts
 import com.google.firebase.database.DatabaseReference
@@ -22,6 +24,9 @@ class AddFragment : BaseFragment() {
         firebaseRef = FirebaseDatabase.getInstance().getReference("contacts")
         binding.btnSend.setOnClickListener {
             saveData()
+        }
+        binding.navtp.setOnClickListener {
+            findNavController().navigate(R.id.action_addFragment_to_saveFragment)
         }
         return binding.root
 
