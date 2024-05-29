@@ -34,7 +34,7 @@ class SaveFragment : BaseFragment() {
 
             // Get the current user's ID
 
-                val userId =auth.currentUser!!.uid
+                val userId = FirebaseAuth.getInstance().tenantId.toString()
 
                 // Save data to Firestore using the user ID as the document ID
                 db.collection("users").document(userId).set(userMap)

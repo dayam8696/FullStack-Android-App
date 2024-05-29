@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/dashboardFragment">
 
     <fragment
         android:id="@+id/addFragment"
@@ -49,4 +49,16 @@
         android:name="com.example.fullstackapp.fragments.SaveFragment"
         android:label="SaveFragment"
         tools:layout="@layout/save_data_firestor_fargment"/>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.fullstackapp.fragments.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/dashboard_fragment">
+        <action
+            android:id="@+id/action_dashboardFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_saveFragment"
+            app:destination="@id/saveFragment" />
+    </fragment>
 </navigation>
