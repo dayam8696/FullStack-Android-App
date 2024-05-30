@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FullStackApp</string>
     <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_HERE</string>
-    <string name="send_data">Send data</string>
+    <string name="send_data">Save data</string>
     <string name="phone_number">phone number</string>
     <string name="realtime_database">Realtime Database</string>
     <string name="cloud_fire_store">Cloud Fire Store</string>
