@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.fullstackapp.databinding.SaveFetchFragmentBinding
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class SaveFetchFragment : BaseFragment() {
@@ -17,10 +16,10 @@ class SaveFetchFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val tvName = binding.editTextName
-        val tvAddress = binding.editTextAddress
-        val tvEmail = binding.editTextEmail
-        val tvPhone = binding.editTextPhoneNumber
+        val tvName = binding.textViewName
+        val tvAddress = binding.textViewAddress
+        val tvEmail = binding.textViewEmail
+        val tvPhone = binding.textViewPhoneNumber
 
         val userId = "dayam"
         if (userId != null) {
