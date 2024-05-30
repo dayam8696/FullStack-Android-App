@@ -25,9 +25,7 @@ class AddFragment : BaseFragment() {
         binding.btnSend.setOnClickListener {
             saveData()
         }
-        binding.navtp.setOnClickListener {
-            findNavController().navigate(R.id.action_addFragment_to_saveFragment)
-        }
+
         return binding.root
 
 

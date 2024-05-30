@@ -6,6 +6,7 @@
     android:gravity="center"
     android:padding="16dp">
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:id="@+id/realtime"
@@ -26,12 +27,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="Image 1"
-                android:layout_marginBottom="8dp"/>
+                android:src="@drawable/img"
+                android:layout_marginBottom="0dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Real Time Dtabase"
+                android:text="@string/realtime_database"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
                 android:textAlignment="center"/>
 
         </LinearLayout>
@@ -56,15 +61,17 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="201dp"
+                android:src="@drawable/img_1"
 
-                android:layout_marginBottom="8dp"
                 android:contentDescription="Image 2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cloud Fire Store"
+                android:text="@string/cloud_fire_store"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:textAlignment="center"/>
 
         </LinearLayout>

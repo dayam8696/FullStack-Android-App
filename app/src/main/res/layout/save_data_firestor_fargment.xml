@@ -6,11 +6,23 @@
     android:padding="16dp"
     android:background="@android:color/white">
 
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Details"
+        android:textColor="#F3C122"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+
     <!-- CardView to contain the form -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:padding="16dp"
@@ -27,7 +39,6 @@
             <!-- Name Field -->
             <EditText
                 android:id="@+id/editTextName"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Name"
@@ -74,13 +85,16 @@
             <Button
                 android:id="@+id/buttonSave"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edit_text_bg"
+               android:textColor="@color/black"
                 android:text="Save"
-                android:backgroundTint="@android:color/black" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:backgroundTint="#F3C122" />
             <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
@@ -92,12 +106,15 @@
     </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/buttontoview"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_marginTop="100dp"
+        android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_edit_text_bg"
-        android:text="view"
-        android:backgroundTint="@android:color/black" />
+        android:textColor="@color/black"
+        android:text="@string/view_data"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#F3C122" />
 </LinearLayout>
