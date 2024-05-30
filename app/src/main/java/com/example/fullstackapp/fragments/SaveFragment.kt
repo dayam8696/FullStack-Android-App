@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.fullstackapp.R
 import com.example.fullstackapp.databinding.SaveDataFirestorFargmentBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -34,7 +36,7 @@ class SaveFragment : BaseFragment() {
 
             // Get the current user's ID
 
-                val userId = FirebaseAuth.getInstance().tenantId.toString()
+                val userId = "dayam"
 
                 // Save data to Firestore using the user ID as the document ID
                 db.collection("users").document(userId).set(userMap)
@@ -55,6 +57,9 @@ class SaveFragment : BaseFragment() {
                         binding.progressBar.visibility = View.GONE
                     }
 
+        }
+        binding.buttontoview.setOnClickListener {
+            findNavController().navigate(R.id.action_saveFragment_to_saveFetchFragment)
         }
         return binding.root
     }

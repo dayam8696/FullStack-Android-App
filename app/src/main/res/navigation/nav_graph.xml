@@ -48,7 +48,11 @@
         android:id="@+id/saveFragment"
         android:name="com.example.fullstackapp.fragments.SaveFragment"
         android:label="SaveFragment"
-        tools:layout="@layout/save_data_firestor_fargment"/>
+        tools:layout="@layout/save_data_firestor_fargment">
+        <action
+            android:id="@+id/action_saveFragment_to_saveFetchFragment"
+            app:destination="@id/saveFetchFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.example.fullstackapp.fragments.DashboardFragment"
@@ -61,4 +65,9 @@
             android:id="@+id/action_dashboardFragment_to_saveFragment"
             app:destination="@id/saveFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/saveFetchFragment"
+        android:name="com.example.fullstackapp.fragments.SaveFetchFragment"
+        android:label="SaveFetchFragment"
+        tools:layout="@layout/save_fetch_fragment"/>
 </navigation>
