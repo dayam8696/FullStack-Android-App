@@ -36,26 +36,26 @@ class SaveFragment : BaseFragment() {
 
             // Get the current user's ID
 
-                val userId = "dayam"
+            val userId = "dayam"
 
-                // Save data to Firestore using the user ID as the document ID
-                db.collection("users").document(userId).set(userMap)
-                    .addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            showToast("Successfully Added!")
-                            binding.editTextName.text.clear()
-                            binding.editTextEmail.text.clear()
-                            binding.editTextAddress.text.clear()
-                            binding.editTextPhoneNumber.text.clear()
-                        } else {
-                            showToast("Failed to add data!")
-                        }
-                        binding.progressBar.visibility = View.GONE
+            // Save data to Firestore using the user ID as the document ID
+            db.collection("users").document(userId).set(userMap)
+                .addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        showToast("Successfully Added!")
+                        binding.editTextName.text.clear()
+                        binding.editTextEmail.text.clear()
+                        binding.editTextAddress.text.clear()
+                        binding.editTextPhoneNumber.text.clear()
+                    } else {
+                        showToast("Failed to add data!")
                     }
-                    .addOnFailureListener { e ->
-                        showToast("Failed to add data: ${e.message}")
-                        binding.progressBar.visibility = View.GONE
-                    }
+                    binding.progressBar.visibility = View.GONE
+                }
+                .addOnFailureListener { e ->
+                    showToast("Failed to add data: ${e.message}")
+                    binding.progressBar.visibility = View.GONE
+                }
 
         }
         binding.buttontoview.setOnClickListener {

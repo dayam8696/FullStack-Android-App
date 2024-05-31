@@ -17,10 +17,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class HomeFragment : BaseFragment(){
+class HomeFragment : BaseFragment() {
     private val binding by lazy { HomeFragmentBinding.inflate(layoutInflater) }
-    private lateinit var contactList :ArrayList<Contacts>
-    private lateinit var firebaseRef :DatabaseReference
+    private lateinit var contactList: ArrayList<Contacts>
+    private lateinit var firebaseRef: DatabaseReference
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,24 +41,24 @@ class HomeFragment : BaseFragment(){
     }
 
     private fun fetchData() {
-       firebaseRef.addValueEventListener(object :ValueEventListener{
-           override fun onDataChange(snapshot: DataSnapshot) {
-               contactList.clear()
-               if(snapshot.exists()){
-                   for (contactSnap in snapshot.children){
-                       val contact = contactSnap.getValue(Contacts::class.java)
-                       contactList.add(contact!!)
-                   }
-               }
-               val rvAdapter = RvContactsAdapter(contactList)
-               binding.rvContacts.adapter = rvAdapter
-           }
+        firebaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                contactList.clear()
+                if (snapshot.exists()) {
+                    for (contactSnap in snapshot.children) {
+                        val contact = contactSnap.getValue(Contacts::class.java)
+                        contactList.add(contact!!)
+                    }
+                }
+                val rvAdapter = RvContactsAdapter(contactList)
+                binding.rvContacts.adapter = rvAdapter
+            }
 
-           override fun onCancelled(error: DatabaseError) {
-                    showToast("error $error")
-           }
+            override fun onCancelled(error: DatabaseError) {
+                showToast("error $error")
+            }
 
-       })
+        })
     }
 }
 

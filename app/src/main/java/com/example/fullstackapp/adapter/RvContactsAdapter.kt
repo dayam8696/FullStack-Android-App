@@ -9,13 +9,20 @@ import com.example.fullstackapp.databinding.RvContactsItemBinding
 import com.example.fullstackapp.fragments.HomeFragmentDirections
 import com.example.fullstackapp.models.Contacts
 
-class RvContactsAdapter(private val contactList :ArrayList< Contacts>) : RecyclerView.Adapter<RvContactsAdapter.ViewHolder>() {
-    class ViewHolder( val binding :RvContactsItemBinding) : RecyclerView.ViewHolder(binding.root){
+class RvContactsAdapter(private val contactList: ArrayList<Contacts>) :
+    RecyclerView.Adapter<RvContactsAdapter.ViewHolder>() {
+    class ViewHolder(val binding: RvContactsItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(RvContactsItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return ViewHolder(
+            RvContactsItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int {
@@ -23,7 +30,7 @@ class RvContactsAdapter(private val contactList :ArrayList< Contacts>) : Recycle
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-      val currentItem = contactList[position]
+        val currentItem = contactList[position]
         holder.apply {
             binding.apply {
                 tvNameItem.text = currentItem.name

@@ -16,7 +16,6 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.68"
@@ -42,8 +41,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="@string/send_data"
         android:backgroundTint="#F3C122"
+        android:text="@string/send_data"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

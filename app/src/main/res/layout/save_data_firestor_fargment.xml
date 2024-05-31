@@ -2,32 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/textViewWelcome"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
         android:text="Enter Your Details"
         android:textColor="#F3C122"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center" />
+        android:textStyle="bold" />
 
 
     <!-- CardView to contain the form -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:padding="16dp"
         android:backgroundTint="#EEEEEE"
         android:elevation="10dp"
+        android:padding="16dp"
         android:radius="12dp"> <!-- Adding rounded corners -->
 
         <LinearLayout
@@ -41,21 +41,21 @@
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Name"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/rounded_edit_text_bg"
-                android:padding="8dp"
-                android:layout_marginBottom="8dp" />
+                android:hint="Enter Name"
+                android:padding="8dp" />
 
             <!-- Address Field -->
             <EditText
                 android:id="@+id/editTextAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Address"
+                android:layout_marginBottom="8dp"
 
                 android:background="@drawable/rounded_edit_text_bg"
-                android:padding="8dp"
-                android:layout_marginBottom="8dp" />
+                android:hint="Enter Address"
+                android:padding="8dp" />
 
             <!-- Email Field -->
             <EditText
@@ -63,11 +63,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_edit_text_bg"
                 android:hint="Enter Email"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/rounded_edit_text_bg"
-                android:padding="8dp"
-                android:layout_marginBottom="8dp" />
+                android:padding="8dp" />
 
             <!-- Phone Number Field -->
             <EditText
@@ -75,46 +75,48 @@
                 android:layout_width="match_parent"
 
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_edit_text_bg"
                 android:hint="Enter Phone Number"
                 android:inputType="phone"
-                android:background="@drawable/rounded_edit_text_bg"
-                android:padding="8dp"
-                android:layout_marginBottom="8dp" />
+                android:padding="8dp" />
 
             <!-- Save Button -->
             <Button
                 android:id="@+id/buttonSave"
                 android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_height="wrap_content"
-               android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#F3C122"
                 android:text="Save"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:backgroundTint="#F3C122" />
+                android:textStyle="bold" />
+
             <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:visibility="gone" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/buttontoview"
         android:layout_width="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:backgroundTint="#F3C122"
         android:text="@string/view_data"
+        android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:backgroundTint="#F3C122" />
+        android:textStyle="bold" />
 </LinearLayout>

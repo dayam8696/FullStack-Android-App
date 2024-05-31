@@ -16,9 +16,9 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class UpdateFragment : BaseFragment() {
-    private val binding by lazy{UpdateFragmentBinding.inflate(layoutInflater)}
-    private lateinit var firebaseRef :DatabaseReference
-    val args :UpdateFragmentArgs by navArgs()
+    private val binding by lazy { UpdateFragmentBinding.inflate(layoutInflater) }
+    private lateinit var firebaseRef: DatabaseReference
+    val args: UpdateFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,18 +48,16 @@ class UpdateFragment : BaseFragment() {
     private fun updateData() {
         val name = binding.edtName.text.toString()
         val phone = binding.edtPhone.text.toString()
-        val contacts = Contacts(args.id ,name,phone)
+        val contacts = Contacts(args.id, name, phone)
 
         firebaseRef.child(args.id).setValue(contacts)
             .addOnCompleteListener {
-                Toast.makeText(context,"Data Updated Successfully",Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Data Updated Successfully", Toast.LENGTH_LONG).show()
 
             }
             .addOnFailureListener {
-                Toast.makeText(context,"Error ${it.message}",Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Error ${it.message}", Toast.LENGTH_LONG).show()
             }
-
-
 
 
     }

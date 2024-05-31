@@ -24,11 +24,10 @@ class AddFragment : BaseFragment() {
         firebaseRef = FirebaseDatabase.getInstance().getReference("contacts")
         binding.btnSend.setOnClickListener {
             saveData()
+            findNavController().navigate(R.id.action_addFragment_to_homeFragment)
         }
 
         return binding.root
-
-
 
 
     }
@@ -44,11 +43,11 @@ class AddFragment : BaseFragment() {
 
         firebaseRef.child(contactId).setValue(contacts)
             .addOnCompleteListener {
-                Toast.makeText(context,"Data Stored Successfully",Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Data Stored Successfully", Toast.LENGTH_LONG).show()
 
             }
             .addOnFailureListener {
-                Toast.makeText(context,"Error ${it.message}",Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Error ${it.message}", Toast.LENGTH_LONG).show()
             }
     }
 

@@ -11,8 +11,8 @@
         android:label="add_fragment"
         tools:layout="@layout/add_fragment" >
         <action
-            android:id="@+id/action_addFragment_to_saveFragment"
-            app:destination="@id/saveFragment" />
+            android:id="@+id/action_addFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"

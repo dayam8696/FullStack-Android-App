@@ -8,13 +8,13 @@
     <TextView
         android:id="@+id/textViewWelcome"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
         android:text="@string/data_you_saved"
         android:textColor="#F3C122"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewName"
@@ -23,8 +23,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/rounded_edit_text_bg"
-        android:text="Name"
         android:padding="10dp"
+        android:text="Name"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/darker_gray"
         android:textSize="18sp" />
@@ -33,11 +33,11 @@
         android:id="@+id/textViewAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_edit_text_bg"
-        android:text="Address"
-        android:padding="10dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_edit_text_bg"
+        android:padding="10dp"
+        android:text="Address"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/darker_gray"
         android:textSize="18sp" />
@@ -49,8 +49,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/rounded_edit_text_bg"
-        android:text="Email"
         android:padding="10dp"
+        android:text="Email"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/darker_gray"
         android:textSize="18sp" />
@@ -59,17 +59,14 @@
         android:id="@+id/textViewPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_edit_text_bg"
-        android:text="Phone Number"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_edit_text_bg"
         android:padding="10dp"
+        android:text="Phone Number"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/darker_gray"
         android:textSize="18sp" />
-
-
-
 
 
     <LinearLayout
@@ -81,13 +78,13 @@
         <TextView
             android:id="@+id/textViewWelcomeup"
             android:layout_width="match_parent"
-            android:layout_marginTop="50dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
             android:text="Update Your Data"
             android:textColor="#F3C122"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editTextName"
@@ -143,11 +140,11 @@
             android:id="@+id/buttonUpdateData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#F3C122"
             android:text="Update"
             android:textColor="@color/black"
-            android:backgroundTint="#F3C122"
             android:textSize="18sp" />
 
 
